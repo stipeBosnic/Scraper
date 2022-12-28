@@ -1,0 +1,1 @@
+folder used to store downloaded images
