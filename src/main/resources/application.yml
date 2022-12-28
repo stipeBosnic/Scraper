@@ -1,0 +1,10 @@
+headerForAdditiveTypeCsv: "sifra,naziv\n"
+headerForAdditiveCsv: "sifra,naziv,fk_tip_aditiva,boja,slika,opis\n"
+aditivCsvPath: src/main/resources/tables/aditiv.csv
+antioksidansiCsvPath: src/main/resources/tables/antioksidansi.csv
+bojilaCsvPath: src/main/resources/tables/bojila.csv
+konzervansiCsvPath: src/main/resources/tables/konzervansi.csv
+pojacivaciOkusaCsvPath: src/main/resources/tables/pojacivaciokusa.csv
+regulatoriKiselostiCsvPath: src/main/resources/tables/regulatorikiselosti.csv
+stabilizatoriCsvPath: src/main/resources/tables/stabilizatori.csv
+umjetnaSladilaCsvPath : src/main/resources/tables/umjetnasladila.csv
