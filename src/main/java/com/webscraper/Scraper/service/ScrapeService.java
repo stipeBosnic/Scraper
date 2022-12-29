@@ -99,8 +99,8 @@ public class ScrapeService {
 
             List<WebElement> allTitles = chromeDriver.findElements(By.tagName("b"));
 
-            Optional<String> additiveTitle = allTitles.stream().filter(webElement -> webElement.getText().startsWith("E"))
-                    .map(additive -> additive.getText()).findFirst();
+            Optional<String> additiveTitle = allTitles.stream().map(additive -> additive.getText())
+                    .filter(text -> text.startsWith("E")).findFirst();
 
             if(additiveTitle.isEmpty()) {
                 allTitles = chromeDriver.findElements(By.tagName("font"));
