@@ -22,8 +22,8 @@ public class CustomHelpService {
         StringBuilder descriptionBuilder = new StringBuilder();
         allText.stream().map(webElement -> webElement.getText()).forEach(textFromElement -> descriptionBuilder.append(textFromElement));
         String description = descriptionBuilder.toString();
-        String descriptionForCsv = description.replaceAll(",", "|");
-        descriptionForCsv = descriptionForCsv.replace("\n", "|").replace("\r", "");
+        String descriptionForCsv = description.replaceAll(",", ";");
+        descriptionForCsv = descriptionForCsv.replace("\n", ";").replace("\r", "");
         return descriptionForCsv;
     }
 
@@ -67,7 +67,7 @@ public class CustomHelpService {
     }
 
     public String convertToCsvFormat(String additiveTitle) {
-        String additiveTitleForCsv = additiveTitle.replaceAll(",", "|");
+        String additiveTitleForCsv = additiveTitle.replaceAll(",", ";");
         if (additiveTitleForCsv.length() > 3) {
             if (additiveTitleForCsv.substring(0, 4).contains(" ")) {
                 return StringUtils.replaceOnce(additiveTitleForCsv, " ", "");

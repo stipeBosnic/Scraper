@@ -122,7 +122,7 @@ public class ScrapeService {
 
                 List<String> additiveInfo = new ArrayList<>(Arrays.stream(additiveTitleForCsv.split(" ", 2)).toList());
 
-                String additiveType = customHelpService.getAdditiveTypeFromTitle(additiveInfo.get(0)).replaceAll(",", "|");
+                String additiveType = customHelpService.getAdditiveTypeFromTitle(additiveInfo.get(0)).replaceAll(",", ";");
                 additiveInfo.add(additiveType);
 
                 if (additiveInfo.get(0).startsWith("E436")) {
